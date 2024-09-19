@@ -4,20 +4,23 @@
   "type": "module",
   "scripts": {
     "build": "nuxt build",
-    "dev": "nuxt dev",
+    "dev": "nuxt dev --host",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare"
   },
   "dependencies": {
     "naive-ui": "^2.39.0",
+    "nprogress": "^0.2.0",
     "nuxt": "^3.13.0",
     "nuxtjs-naive-ui": "^1.0.2",
     "vue": "latest",
     "vue-router": "latest"
   },
   "devDependencies": {
+    "@types/nprogress": "^0.2.3",
     "nuxt-windicss": "^3.0.1",
+    "sass": "^1.79.1",
     "unplugin-auto-import": "^0.18.3",
     "unplugin-vue-components": "^0.27.4"
   }
