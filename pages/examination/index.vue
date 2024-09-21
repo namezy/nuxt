@@ -1,6 +1,6 @@
 <template>
     <div>
-        <h2>profile</h2>
+        examination
     </div>
 </template>
 
