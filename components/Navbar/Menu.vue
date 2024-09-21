@@ -1,13 +1,14 @@
 <template>
     <div class="nav-menu flex items-center px-4">
-        <div class="nav-menu-item cursor-pointer rounded mx-1 px-2 py-1 hover:(bg-blue-50 text-blue-700) active:(bg-blue-100)" :class="item.path===path?'bg-blue-100 text-blue-700':''"  v-for="item in menus" :key="item.path">
-            {{ item.name }}
+        <div class="nav-menu-item cursor-pointer rounded mx-1 px-2 py-1 hover:(bg-blue-50 text-blue-700) active:(bg-blue-100)" :class="item.path===path?'eee':''"  v-for="item in menus" :key="item.path" @click="navigate(item.path)">
+            {{ item.name }}{{ $route.path }}
         </div>
       </div>
 </template>
 
 <script setup lang="ts">
 const {path} = useRoute()
+console.log(path)
 const menus = [
     {
         name:'首页',
@@ -46,6 +47,10 @@ const menus = [
         path:'/course',
     },
 ]
+const navigate = (path:string) =>{
+    console.log(path)
+    navigateTo(path)
+}
 </script>
 
 <style scoped>

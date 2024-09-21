@@ -2,11 +2,7 @@ import NProgress from "nprogress"
 import "nprogress/nprogress.css"
 export default defineNuxtPlugin((nuxtApp) => {
   nuxtApp.hook("page:loading:start", () => {
-    if (import.meta.server) {
-      console.log("server")
-    }
     if (import.meta.client) {
-      console.log("client")
       NProgress.start()
     }
   })
