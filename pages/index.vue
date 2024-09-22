@@ -56,7 +56,6 @@ const { data :groupData} = useFetch(
 const groupList = computed(()=>{
   return groupData.value?.data?.rows || []
 })
-console.log(groupData.value)
 </script>
 
 <style scoped></style>
