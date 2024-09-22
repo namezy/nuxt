@@ -5,7 +5,7 @@ import { NaiveUiResolver } from "unplugin-vue-components/resolvers"
 export default defineNuxtConfig({
   compatibilityDate: "2024-04-03",
   devtools: { enabled: true },
-  modules: ["nuxtjs-naive-ui", "nuxt-windicss", "@nuxt/eslint"],//@bg-dev/nuxt-naiveui
+  modules: ["nuxtjs-naive-ui", "nuxt-windicss", "@nuxt/eslint"], //@bg-dev/nuxt-naiveui
   css: ["@/assets/styles/global.css"],
   vite: {
     plugins: [
