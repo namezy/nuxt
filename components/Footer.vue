@@ -1,5 +1,5 @@
 <template>
-  <footer class="footer bg-dark-400 text-gray-100">
+  <footer class="footer bg-dark-400 text-gray-100 flex-shrink-0">
     <div class="flex items-center justify-center  py-5">
       <a href="#" v-for="item in 5" class="px-3" :key="item">友情链接</a>
     </div>

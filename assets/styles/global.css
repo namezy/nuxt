@@ -2,7 +2,7 @@
     box-sizing: border-box;
 }
 
-html,body,#__nuxt,.n-config-provider,.app{
+html,body,#__nuxt,.n-config-provider{
     height: 100%;
     width: 100%;
 }

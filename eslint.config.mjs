@@ -7,6 +7,7 @@ export default withNuxt([
       "vue/multi-word-component-names": "off",
       "vue/html-self-closing": "off",
       "vue/attributes-order": "off",
+      "vue/attribute-hyphenation": "off",
     },
   },
 ])
