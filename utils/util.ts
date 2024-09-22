@@ -12,14 +12,16 @@ export const openNewWindow = (item) => {
 export const relativeTime = (time: string | number) => {
   if (!time) return ""
   const targetDate = dayjs(time)
-    console.log(targetDate)
   // 计算距现在的时间差
   const now = dayjs()
   const diff = targetDate.diff(now)
+  if(diff<=0) return ''
+  const duration = dayjs.duration(diff)
   return{
-    days:targetDate.diff(now,'day'),
-    hours:targetDate.diff(now,'hour'),
-    minutes:targetDate.diff(now,'minute'),
-    day:targetDate.diff(now,'day'),
+    days:duration.days(),
+    hours:duration.hours().toString().padStart(2,'0'),
+    minutes:duration.minutes().toString().padStart(2,'0'),
+    seconds:duration.seconds().toString().padStart(2,'0'),
   }
 }
+

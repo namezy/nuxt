@@ -21,7 +21,7 @@
           </div>
           <template #footer v-if="item.group_id || item.flashsale_id">
             <div class="bg-yellow-500 text-xs p-3 flex items-center rounded-b text-white">
-              倒计时：
+              <span>{{ item.group_id?'拼团':'秒杀' }}</span>
               <CountDown :time="item.end_time" />
             </div>
           </template>
