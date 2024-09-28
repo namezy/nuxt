@@ -1,7 +1,13 @@
 const request = (url:string,opts={})=>{
     const config = useRuntimeConfig()
     // const appConfig = useAppConfig()
-    return useFetch(url,{
+   
+    // console.log(url)
+    return useFetch(()=>{
+        const query = opts.queryObj || {}
+        url+=formatQueryString(query)
+        return url
+    },{
         onRequest({options}){
             // console.log(appConfig)
             options.baseURL = config.public.apiBaseUrl

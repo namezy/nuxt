@@ -10,7 +10,7 @@
         <template #cover>
           <img :src="item?.src" class="h-[90px]" />
         </template>
-        <p class="text-center mt-4">{{ item?.name }}</p>
+        <p class="text-center mt-4 truncate">{{ item?.name }}</p>
       </n-card>
     </n-gi>
   </n-grid>

@@ -11,6 +11,7 @@
 
 <script setup lang="ts">
 const active = ref(false)
+const route = useRoute()
 const open = () => {
   active.value = true
 }
@@ -30,7 +31,8 @@ const handleSearch = ()=>{
         query:{
             keyword:encodeURIComponent(keyword.value),
             type:'course'
-        }
+        },
+        replace:route.path === '/search'
     })
 }
 defineExpose({

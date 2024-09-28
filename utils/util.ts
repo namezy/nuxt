@@ -43,3 +43,15 @@ export const isPositiveInteger = (value) => {
 
   return false
 }
+
+export const formatQueryString = (params) => {
+  const keys = Object.keys(params)
+  if (keys.length === 0) return ""
+  const queryString = "?"
+  const res = keys
+    .map((key) => {
+      return `${key}=${params[key]}`
+    })
+    .join("&")
+  return queryString + res
+}

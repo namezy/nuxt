@@ -5,7 +5,12 @@
     :content-class="item.group_id || item.flashsale_id ? '!pb-2' : ''"
   >
     <template #cover>
-      <img :src="item?.cover" class="h-[150px] w-full" />
+        <n-image
+          class="h-[150px] w-full"
+          width="100"
+          :src="item?.cover"
+          fallback-src="/fail.png"
+        />
     </template>
     <p class="mt-4 font-bold truncate">{{ item?.title }}</p>
     <div class="flex items-baseline">
@@ -22,7 +27,6 @@
     </template>
   </n-card>
 </template>
-
 
 <script setup lang="ts">
 defineProps({
