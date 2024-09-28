@@ -3,7 +3,7 @@
     <div class="flex items-center main-container h-full">
       <n-button text class="text-lg !font-bold">编程</n-button>
       <Menu />
-      <n-button circle class="ml-auto mr-3">
+      <n-button circle class="ml-auto mr-3" @click="searchInstance?.open()">
         <template #icon>
           <n-icon class="ml-auto">
             <Search />
@@ -18,12 +18,14 @@
         />
       </n-dropdown>
     </div>
+    <search-bar ref="searchInstance"></search-bar>
   </nav>
 </template>
 
 <script setup lang="ts">
 import { Search } from "@vicons/ionicons5"
 // import { NDropdown,NButton,NIcon,NAvatar } from 'naive-ui';
+const searchInstance = ref(null)
 const options = [
   {
     label: "用户中心",
@@ -34,5 +36,4 @@ const options = [
     key: "logout",
   },
 ]
-
 </script>

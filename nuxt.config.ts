@@ -91,4 +91,7 @@ export default defineNuxtConfig({
   //   apiUrl: process.env.API_URL || "https://api.example.com",
   //   siteName: "My Nuxt App",
   // },
+  imports:{
+    dirs:['apis']
+  }
 })

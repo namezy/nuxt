@@ -10,7 +10,8 @@
         v-for="(item, index) in list"
         :key="index"
       >
-        <n-card class="cursor-pointer" footer-class="!p-0" :content-class="item.group_id || item.flashsale_id?'!pb-2':''">
+      <ListItem :item="item"></ListItem>
+        <!-- <n-card class="cursor-pointer" footer-class="!p-0" :content-class="item.group_id || item.flashsale_id?'!pb-2':''">
           <template #cover>
             <img :src="item?.cover" class="h-[150px] w-full" />
           </template>
@@ -25,10 +26,10 @@
               <CountDown :time="item.end_time" />
             </div>
           </template>
-        </n-card>
+        </n-card> -->
       </n-gi>
     </n-grid>
-  </div>
+  </div> 
 </template>
 
 <script setup lang="ts">

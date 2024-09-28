@@ -1,13 +1,12 @@
 const request = (url:string,opts={})=>{
     const config = useRuntimeConfig()
-    const appConfig = useAppConfig()
+    // const appConfig = useAppConfig()
     return useFetch(url,{
         onRequest({options}){
-            console.log(appConfig)
+            // console.log(appConfig)
             options.baseURL = config.public.apiBaseUrl
-            localStorage.getItem('token')
+            // localStorage.getItem('token')
             options.headers = {
-                ...(options.headers||{}),
                 ...(opts.headers||{})
             }
             options.headers.appId = 'bd9d01ecc75dbbaaefce'
@@ -15,6 +14,7 @@ const request = (url:string,opts={})=>{
         onResponse({response}){
             return response._data
         },
+        lazy:true,
         ...opts
     })
 }
@@ -23,5 +23,10 @@ const request = (url:string,opts={})=>{
 
 export const getApi = (url:string,options={})=>{
     options.method = 'GET'
+    return request(url,options)
+}
+
+export const postApi = (url:string,options={})=>{
+    options.method = 'POST'
     return request(url,options)
 }
