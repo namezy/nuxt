@@ -10,10 +10,19 @@
       :title="item.title"
       :list="item.data"
     />
+    <h1>counter:{{ counter }}</h1>
+    <button @click="counter = null">reset</button>
+    <br>
+    <button @click="counter--">-----</button>
+    <br>
+    <button @click="counter++">++++</button>
   </div>
 </template>
 
 <script setup lang="ts">
+const counter = useCookie('counter')
+// throw new Error('test')
+counter.value = counter.value ? Number(counter.value) : Math.round(Math.random() * 100)
 const { data } = getApi("/pc/index")
 //轮播图数据
 const carousels = computed(() => {

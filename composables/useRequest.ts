@@ -1,7 +1,11 @@
 const request = (url:string,opts={})=>{
+    const config = useRuntimeConfig()
+    const appConfig = useAppConfig()
     return useFetch(url,{
         onRequest({options}){
-            options.baseURL = 'http://demonuxtapi.dishait.cn'
+            console.log(appConfig)
+            options.baseURL = config.public.apiBaseUrl
+            localStorage.getItem('token')
             options.headers = {
                 ...(options.headers||{}),
                 ...(opts.headers||{})

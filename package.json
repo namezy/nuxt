@@ -4,13 +4,12 @@
   "type": "module",
   "scripts": {
     "build": "nuxt build",
-    "dev": "nuxt dev --host",
+    "dev": "API_URL=https://production-api.example.com nuxt dev --host",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare"
   },
   "dependencies": {
-    "@bg-dev/nuxt-naiveui": "^2.0.0-rc.1",
     "dayjs": "^1.11.13",
     "naive-ui": "^2.39.0",
     "nprogress": "^0.2.0",

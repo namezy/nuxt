@@ -34,8 +34,8 @@ export default defineNuxtPlugin((nuxtApp) => {
   // // nuxtApp.hook('page:loading:end',()=>{
   // //     console.log('page:loading:end')
   // // })
-  // nuxtApp.hook("app:error", (e) => {
-  //   console.log("App error")
-  //   console.log(e)
-  // })
+  nuxtApp.hook("app:error", (e) => {
+    console.log("App error")
+    console.log(e)
+  })
 })
